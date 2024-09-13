@@ -15,37 +15,40 @@ import {
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 // import { Link } from "next/link";
-import FengShuiLogo from "../assets/FengShuiLogo.png";
+import BlogPost from "../assets/KoiFishes.jpg";
+import FengShuiLogo from "../assets/pikaso_texttoimage_Koi-Feng-Shui-Logo.png";
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col min-h-[100dvh]">
+    <div className="flex flex-col min-h-[200dvh]">
       <header className="px-4 lg:px-6 h-16 flex items-center bg-gradient-to-r from-red-800 to-red-600 text-white">
-        <img src={FengShuiLogo} height={50} width={60} />
         <a className="flex items-center justify-center" href="#">
-          <span className="ml-2 text-lg font-bold">Feng Shui Koi</span>
+          <img src={FengShuiLogo} height={40} width={50} alt="FengShuiLogo" />
+          <span className="ml-2 text-lg font-bold text-white">
+            Feng Shui Koi
+          </span>
         </a>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <a
-            className="text-sm font-medium hover:underline underline-offset-4"
+            className="text-sm font-medium hover:underline underline-offset-4 text-white"
             href="#"
           >
             Home
           </a>
           <a
-            className="text-sm font-medium hover:underline underline-offset-4"
+            className="text-sm font-medium hover:underline underline-offset-4 text-white"
             href="#"
           >
             Consultation
           </a>
           <a
-            className="text-sm font-medium hover:underline underline-offset-4"
+            className="text-sm font-medium hover:underline underline-offset-4 text-white"
             href="#"
           >
             Blog
           </a>
           <a
-            className="text-sm font-medium hover:underline underline-offset-4"
+            className="text-sm font-medium hover:underline underline-offset-4 text-white"
             href="#"
           >
             Advertise
@@ -216,7 +219,7 @@ const HomePage = () => {
                   className="flex flex-col space-y-3 bg-white rounded-lg shadow-md overflow-hidden"
                 >
                   <img
-                    src={`https://via.placeholder.com/400x200?text=Koi+Article+${i}`}
+                    src={BlogPost}
                     alt={`Blog post cover ${i}`}
                     className="aspect-video object-cover"
                   />
