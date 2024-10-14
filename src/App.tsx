@@ -2,12 +2,12 @@ import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import "./index.css";
 
-import HomePage from "./pages/homePage";
+import ContactPage from "./pages/contactPage";
 
 function App() {
   return (
     <BrowserRouter>
-      <HomePage />
+      <ContactPage />
     </BrowserRouter>
   );
 }

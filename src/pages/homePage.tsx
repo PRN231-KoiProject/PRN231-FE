@@ -12,16 +12,15 @@ import {
   Users,
 } from "lucide-react";
 
+import Koi, { default as BlogPost } from "../assets/KoiFishes.jpg";
+import FengShuiLogo from "../assets/pikaso_texttoimage_Koi-Feng-Shui-Logo.png";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
-// import { Link } from "next/link";
-import BlogPost from "../assets/KoiFishes.jpg";
-import FengShuiLogo from "../assets/pikaso_texttoimage_Koi-Feng-Shui-Logo.png";
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col min-h-[200dvh]">
-      <header className="px-4 lg:px-6 h-16 flex items-center bg-gradient-to-r from-red-800 to-red-600 text-white">
+    <div className="flex flex-col min-h-[100dvh]">
+      <header className="px-20 lg:px-200 h-16 flex items-center bg-gradient-to-r from-red-800 to-red-600 text-white">
         <a className="flex items-center justify-center" href="#">
           <img src={FengShuiLogo} height={40} width={50} alt="FengShuiLogo" />
           <span className="ml-2 text-lg font-bold text-white">
@@ -56,8 +55,16 @@ const HomePage = () => {
         </nav>
       </header>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-b from-red-50 to-yellow-50">
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-10 px-40 bg-gradient-to-b from-red-50 to-yellow-50">
           <div className="container px-4 md:px-6">
+            <div className="px-40 py-5">
+              <img
+                className="rounded-xl shadow-md"
+                src={Koi}
+                height={40}
+                width={850}
+              />
+            </div>
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-red-800">
@@ -83,7 +90,7 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+        <section className="w-full py-12 md:py-24 lg:py-32 px-40 bg-white">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-center mb-8 text-gray-800">
               Key Features
@@ -159,7 +166,7 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-blue-50 to-green-50">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b px-40 from-blue-50 to-green-50">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-center mb-8 text-gray-800">
               The Five Elements in Feng Shui
@@ -207,7 +214,7 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-green-50 to-blue-50">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b px-40 from-green-50 to-blue-50">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-center mb-8 text-gray-800">
               Latest Articles
@@ -216,12 +223,12 @@ const HomePage = () => {
               {[1, 2, 3].map((i) => (
                 <div
                   key={i}
-                  className="flex flex-col space-y-3 bg-white rounded-lg shadow-md overflow-hidden"
+                  className="flex flex-col space-y-3 p-3 bg-white rounded-xl shadow-md overflow-hidden"
                 >
                   <img
                     src={BlogPost}
                     alt={`Blog post cover ${i}`}
-                    className="aspect-video object-cover"
+                    className="aspect-video object-cover rounded-3xl"
                   />
                   <div className="p-4">
                     <h3 className="text-xl font-bold text-gray-800">
@@ -244,7 +251,7 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-yellow-50 to-red-50">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b px-40 from-yellow-50 to-red-50">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -275,10 +282,10 @@ const HomePage = () => {
           </div>
         </section>
       </main>
-      <footer className="w-full py-6 bg-gray-100">
-        <div className="container px-4 md:px-6">
+      <footer className="w-full py-6 px-40 bg-gray-100 flex-1">
+        <div className="container">
           <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
-            <div className="space-y-3">
+            <div className="space-y-3 px-10">
               <h4 className="text-sm font-medium text-gray-800">About Us</h4>
               <ul className="space-y-1">
                 <li>
