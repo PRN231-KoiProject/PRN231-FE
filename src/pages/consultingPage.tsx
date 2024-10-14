@@ -1,17 +1,17 @@
-import { Home } from "lucide-react";
+import Consulting from "../components/consulting";
 import Footer from "../components/footer";
 import Header from "../components/header";
 
 type Props = {};
 
-const HomePage = (props: Props) => {
+const ConsultingPage = (props: Props) => {
   return (
     <div>
       <Header />
-      <Home />
+      <Consulting />
       <Footer />
     </div>
   );
 };
 
-export default HomePage;
+export default ConsultingPage;

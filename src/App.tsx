@@ -2,12 +2,12 @@ import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import "./index.css";
 
-import ContactPage from "./pages/contactPage";
+import ConsultingPage from "./pages/consultingPage";
 
 function App() {
   return (
     <BrowserRouter>
-      <ContactPage />
+      <ConsultingPage />
     </BrowserRouter>
   );
 }
