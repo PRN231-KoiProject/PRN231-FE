@@ -1,5 +1,6 @@
 import { Clock, Mail, MapPin, Phone, Send } from "lucide-react";
 import { useState } from "react";
+import FengShuiLogo from "../assets/pikaso_texttoimage_Koi-Feng-Shui-Logo.png";
 import { Button } from "../components/ui/button";
 
 const Input = ({ ...props }) => (
@@ -58,8 +59,10 @@ const ContactPage = () => {
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-red-50 to-yellow-50">
       <header className="px-4 lg:px-6 h-16 flex items-center bg-gradient-to-r from-red-800 to-red-600 text-white">
         <a className="flex items-center justify-center" href="#">
-          <span className="text-2xl mr-2">🐠</span>
-          <span className="text-lg font-bold">Feng Shui Koi</span>
+          <img src={FengShuiLogo} height={40} width={50} alt="FengShuiLogo" />
+          <span className="ml-2 text-lg font-bold text-white">
+            Feng Shui Koi
+          </span>
         </a>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <a
