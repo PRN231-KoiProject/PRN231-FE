@@ -1,13 +1,7 @@
 import { Clock, Mail, MapPin, Phone, Send } from "lucide-react";
 import { useState } from "react";
 import { Button } from "../components/ui/button";
-
-const Input = ({ ...props }) => (
-  <input
-    {...props}
-    className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
-  />
-);
+import { Input } from "./ui/input";
 
 const Textarea = ({ ...props }) => (
   <textarea
@@ -121,23 +115,6 @@ const Contact = () => {
                 Send Message
               </Button>
             </form>
-
-            {/* {status && (
-              <div
-                className={`mt-4 p-3 ${
-                  status.type === "error"
-                    ? "bg-red-100 text-red-700"
-                    : "bg-green-100 text-green-700"
-                } rounded`}
-              >
-                <div className="flex items-center">
-                  <span className="mr-2">
-                    {status.type === "error" ? "⚠️" : "✅"}
-                  </span>
-                  <span>{status.message}</span>
-                </div>
-              </div>
-            )} */}
           </div>
 
           <div className="bg-white rounded-lg shadow-md p-6">
@@ -158,9 +135,9 @@ const Contact = () => {
                 </span>
               </div>
             </div>
-            <div className="mt-6">
+            <div className="mt-12">
               <h3 className="text-lg font-semibold mb-2">Business Hours</h3>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <div className="flex items-center">
                   <Clock className="w-4 h-4 text-red-600 mr-2" />
                   <span>Monday - Friday: 9:00 AM - 6:00 PM</span>

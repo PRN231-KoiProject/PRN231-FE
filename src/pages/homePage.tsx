@@ -1,10 +1,8 @@
-import { Home } from "lucide-react";
 import Footer from "../components/footer";
 import Header from "../components/header";
+import Home from "../components/home";
 
-type Props = {};
-
-const HomePage = (props: Props) => {
+const HomePage = () => {
   return (
     <div>
       <Header />

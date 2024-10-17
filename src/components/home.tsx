@@ -12,6 +12,7 @@ import {
   Users,
 } from "lucide-react";
 
+import { Link } from "react-router-dom";
 import Koi, { default as BlogPost } from "../assets/KoiFishes.jpg";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
@@ -42,9 +43,11 @@ const Home = () => {
                 </p>
               </div>
               <div className="space-x-4">
-                <Button className="bg-red-700 hover:bg-red-600 text-white">
-                  Start Consultation
-                </Button>
+                <Link to="/contact">
+                  <Button className="bg-red-700 hover:bg-red-600 text-white">
+                    Start Consultation
+                  </Button>
+                </Link>
                 <Button
                   variant="outline"
                   className="text-red-700 border-red-700 hover:bg-red-100"

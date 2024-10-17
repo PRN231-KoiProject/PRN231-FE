@@ -1,15 +1,15 @@
-import Consulting from "../components/consulting";
+import Blog from "../components/blog";
 import Footer from "../components/footer";
 import Header from "../components/header";
 
-const ConsultingPage = () => {
+const BlogPage = () => {
   return (
     <div>
       <Header />
-      <Consulting />
+      <Blog />
       <Footer />
     </div>
   );
 };
 
-export default ConsultingPage;
+export default BlogPage;
