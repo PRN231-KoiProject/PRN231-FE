@@ -11,25 +11,25 @@ const Header = (props: Props) => {
       <nav className="ml-auto flex gap-4 sm:gap-6">
         <a
           className="text-sm font-medium hover:underline underline-offset-4"
-          href="#"
+          href="/"
         >
           Home
         </a>
         <a
           className="text-sm font-medium hover:underline underline-offset-4"
-          href="#"
+          href="/consulting"
         >
           Consultation
         </a>
         <a
           className="text-sm font-medium hover:underline underline-offset-4"
-          href="#"
+          href="/blog"
         >
           Blog
         </a>
         <a
           className="text-sm font-medium hover:underline underline-offset-4"
-          href="#"
+          href="/contact"
         >
           Contact
         </a>
