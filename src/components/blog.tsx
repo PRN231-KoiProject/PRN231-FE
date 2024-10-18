@@ -61,7 +61,7 @@ const Blog = () => {
     },
     {
       id: 3,
-      title: "Balancing the Five Elements with Koi",
+      title: "Balancing the Five Elements's Koi",
       excerpt:
         "Explore how to incorporate Koi into your Feng Shui practice to balance the five elements: Wood, Fire, Earth, Metal, and Water. Create harmony in your living space.",
       author: "Sarah Chen",

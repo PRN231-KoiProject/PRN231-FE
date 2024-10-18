@@ -141,7 +141,7 @@ const Consulting = () => {
                 label="Gender"
                 name="gender"
                 value={formData.gender}
-                onChange={handleInputChange}
+                onChange={handleInputChange}  
                 options={[
                   { value: "", label: "Select gender" },
                   { value: "male", label: "Male" },
