@@ -20,6 +20,7 @@ const Contact = () => {
     type: "",
     message: "",
   });
+  console.log(status)
 
   const handleInputChange = (e: any) => {
     const { name, value } = e.target;

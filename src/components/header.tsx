@@ -1,7 +1,7 @@
 import FengShuiLogo from "../assets/pikaso_texttoimage_Koi-Feng-Shui-Logo.png";
-type Props = {};
 
-const Header = (props: Props) => {
+
+const Header = () => {
   return (
     <header className="px-4 lg:px-6 h-16 flex items-center bg-gradient-to-r from-red-800 to-red-600 text-white">
       <a className="flex items-center justify-center" href="#">
