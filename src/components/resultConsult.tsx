@@ -63,6 +63,7 @@ const mockResults = {
       {children}
     </div>
   )
+  console.log(InfoCard)
 
 
 const ResultConsult = () => {
