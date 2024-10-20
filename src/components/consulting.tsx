@@ -1,5 +1,6 @@
 import { Droplet, Flame, Leaf, Mountain, Send, Wind } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Input = ({ label, ...props }: any) => (
   <div className="mb-4">
@@ -32,6 +33,8 @@ const Select = ({ label, options, ...props }: any) => (
 );
 
 const Consulting = () => {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     fullname: "",
     email: "",
@@ -49,6 +52,8 @@ const Consulting = () => {
     e.preventDefault();
     console.log("Form submitted:", formData);
     // Here you would typically send the data to a server
+
+    navigate("/consulting/result");
   };
 
   const currentYear = new Date().getFullYear();

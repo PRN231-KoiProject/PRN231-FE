@@ -41,7 +41,7 @@ const mockResults = {
       compatibleFish: "Koi, Goldfish, Butterfly Koi",
       maintenanceLevel: "Moderate",
       material: "Natural stone and wood accents",
-      link: "https://files.oaiusercontent.com/file-2UhVJGo7H8owEoZqGnLf77oL?se=2024-10-18T09%3A26%3A38Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D8d2ad39f-ff8c-41fe-bb2e-ec0967a4814f.webp&sig=YTk6BU/r%2Bk8bG8GkWD3KA6Ypbjad7iJj4wE8pyLvkhI%3D"
+      link: "https://media.istockphoto.com/id/1196211289/vi/anh/c%E1%BA%ADn-c%E1%BA%A3nh-thi%E1%BA%BFt-k%E1%BA%BF-c%E1%BA%A3nh-quan-khu-v%C6%B0%E1%BB%9Dn-nh%C3%A0-c%E1%BA%A3nh-quan-tuy%E1%BB%87t-%C4%91%E1%BA%B9p-v%E1%BB%9Bi-ao-nh%E1%BB%8F-v%C3%A0-th%C3%A1c-n%C6%B0%E1%BB%9Bc.jpg?s=1024x1024&w=is&k=20&c=mNQQb4ihn8KkULwcVWWmlwZqip3F6Lf4lfHrZIZR6QY="
     }
   };
   
