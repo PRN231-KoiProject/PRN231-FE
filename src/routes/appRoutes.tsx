@@ -3,6 +3,7 @@ import BlogPage from "../pages/blogPage";
 import ConsultingPage from "../pages/consultingPage";
 import ContactPage from "../pages/contactPage";
 import HomePage from "../pages/homePage";
+import LearnMorePage from "../pages/learnMorePage";
 import ResultConsultPage from "../pages/resultConsultPage";
 
 
@@ -12,8 +13,10 @@ const AppRoutes = () => {
       <Route path="/" element={<HomePage />} />
       <Route path="/blog" element={<BlogPage />} />
       <Route path="/contact" element={<ContactPage />} />
+      <Route path="/learnmore" element={<LearnMorePage/>} />
       <Route path="/consulting" element={<ConsultingPage />} />
       <Route path="/consulting/result" element={<ResultConsultPage/>} />
+
     </Routes>
   );
 };
