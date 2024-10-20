@@ -48,12 +48,14 @@ const Home = () => {
                     Start Consultation
                   </Button>
                 </Link>
+                <Link to="/learnmore">
                 <Button
                   variant="outline"
                   className="text-red-700 border-red-700 hover:bg-red-100"
                 >
                   Learn More
                 </Button>
+                </Link>
               </div>
             </div>
           </div>

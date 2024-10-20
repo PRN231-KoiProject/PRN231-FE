@@ -122,16 +122,16 @@ const Contact = () => {
             <div className="space-y-4">
               <div className="flex items-center">
                 <Mail className="w-5 h-5 text-red-600 mr-2" />
-                <span>info@fengshui-koi.com</span>
+                <span>fengshui-koi@gmail.com</span>
               </div>
               <div className="flex items-center">
                 <Phone className="w-5 h-5 text-red-600 mr-2" />
-                <span>+84 123 456 789</span>
+                <span>+84 797 090 433</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="w-5 h-5 text-red-600 mr-2" />
                 <span>
-                  123 Feng Shui Street, Harmony District, Ho Chi Minh City
+                  12 Dong Khoi Street, District 1, Ho Chi Minh City
                 </span>
               </div>
             </div>
