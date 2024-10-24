@@ -5,6 +5,7 @@ import ContactPage from "../pages/contactPage";
 import HomePage from "../pages/homePage";
 import LearnMorePage from "../pages/learnMorePage";
 import ResultConsultPage from "../pages/resultConsultPage";
+import AdminPage from "../pages/adminPage";
 
 
 const AppRoutes = () => {
@@ -16,6 +17,8 @@ const AppRoutes = () => {
       <Route path="/learnmore" element={<LearnMorePage/>} />
       <Route path="/consulting" element={<ConsultingPage />} />
       <Route path="/consulting/result" element={<ResultConsultPage/>} />
+      <Route path="/dashboard" element={<AdminPage/>} />
+
 
     </Routes>
   );
