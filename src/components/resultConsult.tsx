@@ -124,7 +124,6 @@ const ResultConsult = () => {
             <p><strong>Direction:</strong> <Compass className="inline w-4 h-4 mr-1" />{mockResults.pondDesign.direction}</p>
             <p><strong>Element:</strong> <ElementIcon element={mockResults.pondDesign.element} />{mockResults.pondDesign.element}</p>
             <p><strong>Size:</strong> {mockResults.pondDesign.size}</p>
-            <p><strong>Pond Material:</strong> {mockResults.pondDesign.pondMaterial}</p>
             <p><strong>Water Source:</strong> {mockResults.pondDesign.waterSource}</p>
             <p><strong>Filter Type:</strong> {mockResults.pondDesign.filterType}</p>
             <p><strong>Compatible Fish:</strong> {mockResults.pondDesign.compatibleFish}</p>
