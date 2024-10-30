@@ -6,6 +6,7 @@ import HomePage from "../pages/homePage";
 import LearnMorePage from "../pages/learnMorePage";
 import ResultConsultPage from "../pages/resultConsultPage";
 import AdminPage from "../pages/adminPage";
+import CategoryPage from "../pages/categoryPage";
 
 
 const AppRoutes = () => {
@@ -15,6 +16,7 @@ const AppRoutes = () => {
       <Route path="/blog" element={<BlogPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/learnmore" element={<LearnMorePage/>} />
+      <Route path="/category" element={<CategoryPage/>} />
       <Route path="/consulting" element={<ConsultingPage />} />
       <Route path="/consulting/result" element={<ResultConsultPage/>} />
       <Route path="/dashboard" element={<AdminPage/>} />
