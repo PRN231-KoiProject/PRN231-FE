@@ -18,6 +18,12 @@ const Header = () => {
         </Link>
         <Link
           className="text-sm font-medium hover:underline underline-offset-4"
+          to="/category"
+        >
+          Category
+        </Link>
+        <Link
+          className="text-sm font-medium hover:underline underline-offset-4"
           to="/consulting"
         >
           Consultation
