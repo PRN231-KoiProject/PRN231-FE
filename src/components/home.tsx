@@ -13,11 +13,34 @@ import {
 } from "lucide-react";
 
 import { Link } from "react-router-dom";
-import Koi, { default as BlogPost } from "../assets/KoiFishes.jpg";
+import Koi from "../assets/KoiFishes.jpg";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 
 const Home = () => {
+  const blogs = [
+    {
+      id: 1,
+      title: "How to Choose Koi Fish for Feng Shui",
+      description:
+        "Learn how selecting specific Koi fish breeds can enhance your home's Feng Shui.",
+      image: "https://images.pexels.com/photos/2131828/pexels-photo-2131828.jpeg",
+    },
+    {
+      id: 2,
+      title: "Top Tips for Koi Pond Maintenance",
+      description:
+        "Discover the best practices for keeping your Koi pond clean and healthy.",
+      image: "https://images.pexels.com/photos/13093376/pexels-photo-13093376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      id: 3,
+      title: "The Five Elements in Koi Pond Design",
+      description:
+        "Explore how to align your pond’s design with Feng Shui’s five elements.",
+      image: "https://images.pexels.com/photos/7565647/pexels-photo-7565647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+  ];
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <main className="flex-1">
@@ -190,24 +213,22 @@ const Home = () => {
               Latest Articles
             </h2>
             <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-              {[1, 2, 3].map((i) => (
+              {blogs.map((blog) => (
                 <div
-                  key={i}
+                  key={blog.id}
                   className="flex flex-col space-y-3 p-3 bg-white rounded-xl shadow-md overflow-hidden"
                 >
                   <img
-                    src={BlogPost}
-                    alt={`Blog post cover ${i}`}
+                    src={blog.image}
+                    alt={`Blog post cover ${blog.id}`}
                     className="aspect-video object-cover rounded-3xl"
                   />
                   <div className="p-4">
                     <h3 className="text-xl font-bold text-gray-800">
-                      Koi and Feng Shui Article #{i}
+                      {blog.title}
                     </h3>
                     <p className="text-sm text-gray-600 mt-2">
-                      Learn more about selecting and caring for Koi fish
-                      according to Feng Shui principles to bring luck and
-                      prosperity.
+                      {blog.description}
                     </p>
                     <a
                       className="text-blue-600 hover:underline mt-4 inline-block"
@@ -221,6 +242,7 @@ const Home = () => {
             </div>
           </div>
         </section>
+
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b px-40 from-yellow-50 to-red-50">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
