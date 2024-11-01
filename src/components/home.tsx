@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import {
   CircleDollarSign,
   Droplets,
@@ -11,7 +12,6 @@ import {
   ShoppingBag,
   Users,
 } from "lucide-react";
-
 import { Link } from "react-router-dom";
 import Koi from "../assets/KoiFishes.jpg";
 import { Button } from "../components/ui/button";
@@ -44,6 +44,12 @@ const Home = () => {
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <main className="flex-1">
+      <motion.div 
+              className="relative mb-4 md:mb-0"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-10 px-40 bg-gradient-to-b from-red-50 to-yellow-50">
           <div className="container px-4 md:px-6">
             <div className="px-40 py-5">
@@ -273,6 +279,8 @@ const Home = () => {
             </div>
           </div>
         </section>
+        </motion.div>
+
       </main>
     </div>
   );

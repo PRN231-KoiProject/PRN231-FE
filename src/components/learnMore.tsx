@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { ArrowRight, Droplet, Flame, Leaf, Mountain, Wind } from 'lucide-react';
 
 const SectionTitle = ({ children }:any) => (
@@ -19,11 +20,24 @@ const LearnMore = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-red-50 to-yellow-50">
         <main className="container mx-auto px-4 py-12">
+        <motion.h1 
+            className="text-5xl font-bold text-center text-red-800 mb-8"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
         <h1 className="text-5xl font-bold text-center text-red-800 mb-8">Understanding Feng Shui</h1>
         <p className="text-xl text-center text-gray-600 mb-12">
           Explore the ancient art of harmonizing individuals with their surrounding environment
         </p>
+        </motion.h1>
 
+        <motion.div 
+              className="relative mb-4 md:mb-0"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
         <article className="bg-white rounded-lg shadow-lg p-8 mb-16">
           <section className="mb-12">
             <SectionTitle>What is Feng Shui?</SectionTitle>
@@ -105,6 +119,7 @@ const LearnMore = () => {
             </Paragraph>
           </section>
         </article>
+        </motion.div>
 
         <section className="text-center">
           <h2 className="text-3xl font-semibold text-red-800 mb-6">Start Your Feng Shui Journey</h2>

@@ -1,4 +1,4 @@
-  import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronDown, ChevronUp, Info, Search } from 'lucide-react';
 import { useState } from 'react';
 
@@ -31,7 +31,6 @@ import { useState } from 'react';
           </div>
           <div className="p-4">
             <h3 className="text-xl font-semibold text-gray-800 mb-2">{name}</h3>
-            {/* <p className="text-lg font-bold text-red-600 mb-2">${price}</p> */}
             <AnimatePresence>
               {isExpanded && (
                 <motion.div
@@ -41,7 +40,6 @@ import { useState } from 'react';
                   transition={{ duration: 0.3 }}
                 >
                   <p className="text-sm text-gray-600 mb-1">Color: {color}</p>
-                  {/* <p className="text-sm text-gray-600 mb-1">Size: {size}</p> */}
                   <p className="text-sm text-gray-600 mb-2">{description}</p>
                 </motion.div>
               )}
