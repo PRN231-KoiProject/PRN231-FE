@@ -7,7 +7,7 @@ import { useState } from 'react';
       return <nav>...</nav>;
     };
     
-    const KoiCard = ({ name, type, color, size, price, image, description }:any) => {
+    const KoiCard = ({ name, type, color, image, description }:any) => {
       const [isExpanded, setIsExpanded] = useState(false);
     
       return (
@@ -91,8 +91,6 @@ import { useState } from 'react';
         "name": "Asagi",
         "type": "Popular",
         "color": "Blue and Red",
-        "size": "Small",
-        "price": 800,
         "image": "https://www.kodamakoifarm.com/wp-content/uploads/2019/02/asagi-koi-135x200-v1.jpg",
         "description": "The Asagi has a light blue body with red markings on the sides."
       },
@@ -100,8 +98,6 @@ import { useState } from 'react';
         "name": "Bekko",
         "type": "Popular",
         "color": "White, Red, or Yellow with Black Markings",
-        "size": "Medium",
-        "price": 950,
         "image": "https://www.kodamakoifarm.com/wp-content/uploads/2018/03/Bekko.jpg",
         "description": "Bekko koi have a solid body color with black sumi markings."
       },
@@ -109,8 +105,6 @@ import { useState } from 'react';
         "name": "Doitsu",
         "type": "Rare",
         "color": "Varies",
-        "size": "Medium",
-        "price": 1000,
         "image": "https://www.kodamakoifarm.com/wp-content/uploads/2018/03/Doitsu.jpg",
         "description": "Doitsu koi are scaleless, often with a smooth, sleek appearance."
       },
@@ -118,8 +112,6 @@ import { useState } from 'react';
         "name": "Ginrin",
         "type": "Rare",
         "color": "Metallic, Sparkling Scales",
-        "size": "Medium",
-        "price": 1200,
         "image": "https://www.kodamakoifarm.com/wp-content/uploads/2018/03/Ginrin-1.jpg",
         "description": "Ginrin koi have scales that sparkle in the light, creating a beautiful glitter effect."
       },
@@ -127,8 +119,6 @@ import { useState } from 'react';
         "name": "Goshiki",
         "type": "Very Rare",
         "color": "White with Black, Red, and Blue",
-        "size": "Medium",
-        "price": 1300,
         "image": "https://www.kodamakoifarm.com/wp-content/uploads/2018/03/Goshiki.jpg",
         "description": "Goshiki koi have five colors on their body: white, black, red, blue, and gray."
       },
@@ -136,8 +126,6 @@ import { useState } from 'react';
         "name": "Hirenaga (Butterfly)",
         "type": "Popular",
         "color": "Various",
-        "size": "Large",
-        "price": 1600,
         "image": "https://www.kodamakoifarm.com/wp-content/uploads/2018/03/Hirenaga.jpg",
         "description": "Hirenaga koi are known for their long, flowing fins and tails."
       },
@@ -145,8 +133,6 @@ import { useState } from 'react';
         "name": "Kawarimono",
         "type": "Rare",
         "color": "Varies",
-        "size": "Large",
-        "price": 1100,
         "image": "https://www.kodamakoifarm.com/wp-content/uploads/2018/03/Kawarimono.jpg",
         "description": "Kawarimono is a category for koi with unique or unusual patterns."
       },
@@ -154,8 +140,6 @@ import { useState } from 'react';
         "name": "Kikokuryu",
         "type": "Very Rare",
         "color": "Black and White",
-        "size": "Medium",
-        "price": 1400,
         "image": "https://www.kodamakoifarm.com/wp-content/uploads/2018/03/Hirenaga-koi.jpg",
         "description": "Kikokuryu are metallic koi with contrasting black and white colors."
       },
@@ -163,8 +147,6 @@ import { useState } from 'react';
         "name": "Ogon",
         "type": "Very Rare",
         "color": "Metallic Gold or Platinum",
-        "size": "Large",
-        "price": 1800,
         "image": "https://www.kodamakoifarm.com/wp-content/uploads/2019/02/ogon-koi-135x200-v1.jpg",
         "description": "Ogon koi have a solid metallic color, typically gold or platinum."
       },
@@ -172,8 +154,6 @@ import { useState } from 'react';
         "name": "Platinum",
         "type": "Popular",
         "color": "Pure White, Metallic",
-        "size": "Medium",
-        "price": 1000,
         "image": "https://www.kodamakoifarm.com/wp-content/uploads/2019/02/platinum-koi-135x200-v1.jpg",
         "description": "Platinum koi have a shiny white color with a metallic finish."
       },
@@ -181,8 +161,6 @@ import { useState } from 'react';
         "name": "Tancho",
         "type": "Very Rare",
         "color": "White with a Red Spot on the Head",
-        "size": "Medium",
-        "price": 1500,
         "image": "https://www.kodamakoifarm.com/wp-content/uploads/2019/02/tancho-koi-135x200-v1.jpg",
         "description": "Tancho koi are known for their white body and a single red mark on the head."
       },
@@ -190,8 +168,6 @@ import { useState } from 'react';
         "name": "Utsurimono",
         "type": "Rare",
         "color": "Black with Red, White, or Yellow",
-        "size": "Medium",
-        "price": 1150,
         "image": "https://www.kodamakoifarm.com/wp-content/uploads/2018/03/Utsurimono.jpg",
         "description": "Utsurimono koi have a black body with white, red, or yellow markings."
       },
@@ -199,8 +175,6 @@ import { useState } from 'react';
         "name": "Kohaku",
         "type": "Popular",
         "color": "White body with red patterns",
-        "size": "Medium",
-        "price": 1000,
         "image": "https://www.kodamakoifarm.com/wp-content/uploads/2018/03/Kohaku.jpg",
         "description": "Kohaku koi have a pure white body with large red markings, often seen as the foundation of all koi varieties."
       },
@@ -208,8 +182,6 @@ import { useState } from 'react';
         "name": "Koromo",
         "type": "Rare",
         "color": "White with red patterns overlaid with black or blue reticulation",
-        "size": "Medium",
-        "price": 1250,
         "image": "https://www.kodamakoifarm.com/wp-content/uploads/2018/03/Koromo.jpg",
         "description": "Koromo koi display a net-like pattern over their red patches, often giving them a distinctive look."
       },
@@ -217,8 +189,6 @@ import { useState } from 'react';
         "name": "Showa",
         "type": "Very Rare",
         "color": "Black with red and white markings",
-        "size": "Large",
-        "price": 1700,
         "image": "https://www.kodamakoifarm.com/wp-content/uploads/2018/03/Showa.jpg",
         "description": "Showa koi have a black base with striking red and white patterns, creating a balanced tri-color look."
       },
@@ -226,8 +196,6 @@ import { useState } from 'react';
         "name": "Shusui",
         "type": "Rare",
         "color": "Light blue with red sides and a line of scales along the dorsal",
-        "size": "Medium",
-        "price": 1300,
         "image": "https://www.kodamakoifarm.com/wp-content/uploads/2019/02/shusui-koi-135x200-v1.jpg",
         "description": "Shusui koi are scaleless with a beautiful, distinctive line of scales on their backs, resembling the Asagi pattern."
       },
@@ -235,8 +203,6 @@ import { useState } from 'react';
         "name": "Taisho Sanke",
         "type": "Very Rare",
         "color": "White body with red and black markings",
-        "size": "Large",
-        "price": 1500,
         "image": "https://www.kodamakoifarm.com/wp-content/uploads/2018/03/Taisho-Sanke.jpg",
         "description": "Taisho Sanke koi, also known as Sanke, are similar to Kohaku but include black sumi markings, adding depth to their look."
       }
