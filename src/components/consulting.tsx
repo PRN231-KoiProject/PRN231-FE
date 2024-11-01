@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { Droplet, Flame, Leaf, Mountain, Send, Wind } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -90,8 +91,22 @@ const Consulting = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-red-50 to-yellow-50">
       <main className="container mx-auto px-4 py-12">
+      <motion.div 
+              className="relative mb-4 md:mb-0"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+
         <h1 className="text-4xl font-bold text-center text-red-800 mb-12">
+        <motion.h1 
+            className="text-5xl font-bold text-center text-red-800 mb-8"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
           Feng Shui Koi Consultation
+          </motion.h1>
         </h1>
 
         <div className="max-w-4xl mx-auto">
@@ -216,6 +231,7 @@ const Consulting = () => {
             ))}
           </div>
         </div>
+        </motion.div>
       </main>
     </div>
   );

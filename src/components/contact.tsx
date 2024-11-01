@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { Clock, Mail, MapPin, Phone, Send } from "lucide-react";
 import { useState } from "react";
 import { Button } from "../components/ui/button";
@@ -52,6 +53,12 @@ const Contact = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-red-50 to-yellow-50">
       <main className="flex-grow container mx-auto px-4 py-8">
+      <motion.div 
+              className="relative mb-4 md:mb-0"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
         <h1 className="text-3xl font-bold text-center text-red-800 mb-8">
           Contact Us
         </h1>
@@ -155,6 +162,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
+        </motion.div>
       </main>
     </div>
   );
