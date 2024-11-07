@@ -1,12 +1,14 @@
 import { Route, Routes } from "react-router-dom";
+import AdminPage from "../pages/adminPage";
 import BlogPage from "../pages/blogPage";
+import CategoryPage from "../pages/categoryPage";
 import ConsultingPage from "../pages/consultingPage";
 import ContactPage from "../pages/contactPage";
+import SignInPage from "../pages/FormPage/signInPage";
+import SignUpPage from "../pages/FormPage/signUpPage";
 import HomePage from "../pages/homePage";
 import LearnMorePage from "../pages/learnMorePage";
 import ResultConsultPage from "../pages/resultConsultPage";
-import AdminPage from "../pages/adminPage";
-import CategoryPage from "../pages/categoryPage";
 
 
 const AppRoutes = () => {
@@ -21,7 +23,8 @@ const AppRoutes = () => {
       <Route path="/consulting/result" element={<ResultConsultPage/>} />
       <Route path="/dashboard" element={<AdminPage/>} />
 
-
+      <Route path="/signIn" element={<SignInPage />} />
+      <Route path="/signUp" element={<SignUpPage />} />
     </Routes>
   );
 };

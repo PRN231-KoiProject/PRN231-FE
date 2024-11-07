@@ -23,7 +23,7 @@ const Home = () => {
       id: 1,
       title: "How to Choose Koi Fish for Feng Shui",
       description:
-        "Learn how selecting specific Koi fish breeds can enhance your home's Feng Shui.",
+        "Learn how selecting specific Koi enhance your home's Feng Shui.",
       image: "https://images.pexels.com/photos/2131828/pexels-photo-2131828.jpeg",
     },
     {

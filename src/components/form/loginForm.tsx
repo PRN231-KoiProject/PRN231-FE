@@ -1,6 +1,6 @@
 
 import { motion } from 'framer-motion';
-import { Eye, EyeOff, Fish } from 'lucide-react';
+import { Eye, EyeOff } from 'lucide-react';
 import React, { useState } from 'react';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
@@ -45,9 +45,7 @@ const LoginForm = () => {
         transition={{ duration: 0.5 }}
         className="bg-white rounded-lg shadow-xl p-8 max-w-md w-full"
       >
-        <div className="flex justify-center mb-6">
-          <Fish className="h-12 w-12 text-red-600" />
-        </div>
+        
         <h1 className="text-3xl font-bold text-center text-red-800 mb-6">Login</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
