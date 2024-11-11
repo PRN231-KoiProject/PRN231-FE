@@ -1,22 +1,26 @@
-// Card.tsx
 import React from 'react'
 
-export const Card = ({ children }: { children: React.ReactNode }) => (
-  <div className="bg-white shadow rounded-lg p-6">{children}</div>
+interface CardProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export const Card = ({ children, className }: CardProps) => (
+  <div className={`bg-white shadow rounded-lg p-6 ${className || ''}`}>{children}</div>
 )
 
-export const CardHeader = ({ children }: { children: React.ReactNode }) => (
-  <div className="border-b pb-4">{children}</div>
+export const CardHeader = ({ children, className }: CardProps) => (
+  <div className={`border-b pb-4 ${className || ''}`}>{children}</div>
 )
 
-export const CardTitle = ({ children }: { children: React.ReactNode }) => (
-  <h2 className="text-xl font-semibold">{children}</h2>
+export const CardTitle = ({ children, className }: CardProps) => (
+  <h2 className={`text-xl font-semibold ${className || ''}`}>{children}</h2>
 )
 
-export const CardDescription = ({ children }: { children: React.ReactNode }) => (
-  <p className="text-gray-600">{children}</p>
+export const CardDescription = ({ children, className }: CardProps) => (
+  <p className={`text-gray-600 ${className || ''}`}>{children}</p>
 )
 
-export const CardContent = ({ children }: { children: React.ReactNode }) => (
-  <div className="pt-4">{children}</div>
+export const CardContent = ({ children, className }: CardProps) => (
+  <div className={`pt-4 ${className || ''}`}>{children}</div>
 )

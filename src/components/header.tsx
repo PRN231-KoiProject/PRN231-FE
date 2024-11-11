@@ -1,16 +1,18 @@
 import { LogOut, Settings, User } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import FengShuiLogo from "../assets/pikaso_texttoimage_Koi-Feng-Shui-Logo.png";
 import { Button } from "./ui/button";
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Initially dropdown is closed
+  const navigate = useNavigate();
 
   const toggleDropdown = () => setIsDropdownOpen(prev => !prev); // Toggle dropdown state
 
   const handleProfileClick = () => {
     // Profile click action (e.g., navigate to profile page)
+    navigate("/profile");
     console.log("Profile clicked");
   };
 
@@ -24,6 +26,8 @@ const Header = () => {
     // Log out action
     console.log("Logged out");
     localStorage.removeItem("role");
+    navigate("/");
+    window.location.reload();
   };
 
   return (

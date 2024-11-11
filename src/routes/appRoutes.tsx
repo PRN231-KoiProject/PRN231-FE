@@ -9,6 +9,7 @@ import SignUpPage from "../pages/FormPage/signUpPage";
 import HomePage from "../pages/homePage";
 import LearnMorePage from "../pages/learnMorePage";
 import ResultConsultPage from "../pages/resultConsultPage";
+import ProfilePage from "../pages/profilePage";
 
 
 const AppRoutes = () => {
@@ -22,6 +23,9 @@ const AppRoutes = () => {
       <Route path="/consulting" element={<ConsultingPage />} />
       <Route path="/consulting/result" element={<ResultConsultPage/>} />
       <Route path="/dashboard" element={<AdminPage/>} />
+
+      <Route path="/profile" element={<ProfilePage/>} />
+
 
       <Route path="/signIn" element={<SignInPage />} />
       <Route path="/signUp" element={<SignUpPage />} />

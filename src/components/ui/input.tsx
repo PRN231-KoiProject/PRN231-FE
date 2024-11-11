@@ -1,11 +1,14 @@
 import * as React from "react";
-import { cn } from "../../lib/utils";
+import { cn } from "../../lib/utils"; // Giả sử bạn đang sử dụng một helper function như 'classnames'
 
-export interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {}
+export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  type?: "text" | "password" | "email" | "tel" | "number" | "file";
+  placeholder?: string; // Thêm placeholder vào đây
+}
+
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, ...props }, ref) => {
+  ({ className, type = "text", ...props }, ref) => { // Mặc định 'type' là 'text'
     return (
       <input
         type={type}
