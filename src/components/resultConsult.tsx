@@ -1,5 +1,7 @@
 import { Clock, Compass, DollarSign, Droplet, Flame, Leaf, Mountain, Ruler, Wind } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { KoiFish } from "../interfaces/KoiFish/fishResponse";
+import koiFishApi from "../services/koiFishApi";
 
 const mockResults = {
     fullname: "Nguyễn Văn A",
@@ -68,6 +70,7 @@ const mockResults = {
 
 const ResultConsult = () => {
     const [isModalOpen, setModalOpen] = useState(false);
+    const [fishes, setFishes] = useState<KoiFish[]>([]);
 
     const openModal = () => {
       setModalOpen(true);
@@ -76,6 +79,17 @@ const ResultConsult = () => {
     const closeModal = () => {
       setModalOpen(false);
     };
+
+    const fetchKoiFish = async () => {
+      const response = (await koiFishApi.getAllFish());
+      console.log("fish ne", response);
+      setFishes(response.data);
+    };
+  
+    useEffect(() => {
+      fetchKoiFish();
+    }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-red-50 to-yellow-50">
         <main className="container mx-auto px-4 py-12">
@@ -103,7 +117,7 @@ const ResultConsult = () => {
                   <p><strong>Element:</strong> <ElementIcon element={koi.fishElement} />{koi.fishElement}</p>
                   <p><strong>Color:</strong> {koi.color}</p>
                   <p><strong>Size:</strong> <Ruler className="inline w-4 h-4 mr-1" />{koi.size}</p>
-                  <p><strong>Price Range:</strong> <DollarSign className="inline w-4 h-4 mr-1" />{koi.priceRange}</p>
+                  <p><strong>Price:</strong> <DollarSign className="inline w-4 h-4 mr-1" />{koi.priceRange}</p>
                   <p><strong>Lifespan:</strong> <Clock className="inline w-4 h-4 mr-1" />{koi.lifespan}</p>
                 </div>
                 <img 
