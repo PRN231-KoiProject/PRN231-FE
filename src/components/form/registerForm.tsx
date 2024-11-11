@@ -13,7 +13,7 @@ const RegisterForm = () => {
     phoneNumber: '',
   });
   const [avatar, setAvatar] = useState<File | null>(null);
-  const [avatarName, setAvatarName] = useState<string>('No file selected'); // To display selected file name
+  const [avatarName, setAvatarName] = useState<string>('No file selected'); 
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -27,7 +27,7 @@ const RegisterForm = () => {
   const handleAvatarChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       setAvatar(e.target.files[0]);
-      setAvatarName(e.target.files[0].name); // Update file name to display
+      setAvatarName(e.target.files[0].name); 
     }
   };
 

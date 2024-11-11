@@ -1,42 +1,60 @@
-
 import { motion } from 'framer-motion';
 import { Eye, EyeOff } from 'lucide-react';
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import authApi from '../../services/authApi';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Label } from '../ui/label';
 import { useToast } from '../ui/toast';
 
-const users = [
-  { email: 'member@example.com', password: 'memberpass', role: 'member' },
-  { email: 'admin@example.com', password: 'adminpass', role: 'admin' },
-]
 
 const LoginForm = () => {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [showPassword, setShowPassword] = useState(false)
-  // const [role, setRole] = useState('member')
-  const { toast } = useToast()
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const { toast } = useToast();
+  const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    const user = users.find(u => u.email === email && u.password === password)
-    if (user) {
+  const handleSubmit = async (e : any) => {
+    e.preventDefault();
+    const loginRequest = { email, password };
+
+    try {
+      const response = await authApi.login(loginRequest);
+
+      if (response.data.role == "Admin" || response.data.role == "Customer") {
+        localStorage.setItem('userId', response.data.userId);
+        localStorage.setItem('accessToken', response.data.accessToken);
+        localStorage.setItem('refreshToken', response.data.refreshToken);
+        localStorage.setItem('role', response.data.role);
+
+        toast({
+          title: "Login Successful",
+          description: `Welcome back, ${response.data.role === 'Admin' ? 'Admin' : 'Customer'}!`,
+        });
+
+        // Save tokens in local storage
+        
+
+        navigate(response.data.role === 'Admin' ? '/dashboard' : '/');
+      } else {
+        toast({
+          title: "Login Failed",
+          description: "Invalid email or password. Please try again.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      console.error("Error logging in:", error);
       toast({
-        title: "Login Successful",
-        description: `Welcome back, ${user.role === 'admin' ? 'Admin' : 'Member'}!`,
-      })
-      console.log('Logged in as:', user.role)
-      // Here you would typically set user session or redirect based on role
-    } else {
-      toast({
-        title: "Login Failed",
-        description: "Invalid email or password. Please try again.",
+        title: "Login Error",
+        description: "Something went wrong. Please try again.",
         variant: "destructive",
-      })
+      });
     }
-  }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 to-orange-50 flex items-center justify-center p-4">
       <motion.div
@@ -45,7 +63,6 @@ const LoginForm = () => {
         transition={{ duration: 0.5 }}
         className="bg-white rounded-lg shadow-xl p-8 max-w-md w-full"
       >
-        
         <h1 className="text-3xl font-bold text-center text-red-800 mb-6">Login</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
@@ -75,15 +92,11 @@ const LoginForm = () => {
                 onClick={() => setShowPassword(!showPassword)}
                 className="absolute right-3 top-1/2 transform -translate-y-1/2"
               >
-                {showPassword ? (
-                  <EyeOff className="h-4 w-4 text-gray-500" />
-                ) : (
-                  <Eye className="h-4 w-4 text-gray-500" />
-                )}
+                {showPassword ? <EyeOff className="h-4 w-4 text-gray-500" /> : <Eye className="h-4 w-4 text-gray-500" />}
               </button>
             </div>
           </div>
-          <Button type="submit" className="w-full bg-red-600 hover:bg-red-700">
+          <Button type="submit" className="w-full bg-red-600 hover:bg-red-700 text-white">
             Login
           </Button>
         </form>
@@ -98,7 +111,7 @@ const LoginForm = () => {
         </div>
       </motion.div>
     </div>
-  )
+  );
 };
 
 export default LoginForm;

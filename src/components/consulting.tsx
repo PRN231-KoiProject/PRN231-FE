@@ -35,6 +35,7 @@ const Select = ({ label, options, ...props }: any) => (
 
 const Consulting = () => {
   const navigate = useNavigate();
+  
 
   const [formData, setFormData] = useState({
     fullname: "",
@@ -184,14 +185,7 @@ const Consulting = () => {
                 ]}
                 required
               />
-              <Input
-                label="Life Fate (if known)"
-                type="text"
-                name="lifeFate"
-                value={formData.lifeFate}
-                onChange={handleInputChange}
-                placeholder="e.g., Water Dragon, Fire Horse"
-              />
+              
               <button
                 type="submit"
                 className="w-full bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 transition-colors flex items-center justify-center"
